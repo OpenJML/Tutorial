@@ -3,24 +3,44 @@ Author        : David R. Cok
 Affiliation   : CEA, Safer Software Consulting
 Email         : david.r.cok@gmail.com
 
-Colorizer     : javascript
+Colorizer     : java
 Bib style     : plainnat
 Bibliography  : example
 Logo          : False
 
-Doc class     : [10pt]article
+Doc class     : [12pt]article
+
+lesson-format : **Lesson\ &label;: &caption;**
+
+Lesson {
+ label: '[@lesson]{.lesson-label}';
+ before: '[&lesson-format;]{.lesson-before}';
+ display : block;
+ font-size: 20pt;
+ @lesson: arabic1
+ @lesson;
+ breakable: true;
+ }
+ 
 
 # Introduction 
 
 ... introducction ...
+&pagebreak;
 
-#Lesson 1: Postconditions 
+~ Lesson {caption: Postconditions}
+~
 
-
-
+{Postconditions}
 &pagebreak;
 
 
 
-# Lesson 2: Preconditions 
+
+
+
+~ Lesson {caption: Preconditions}
+~
+
+... preconditions...
 &pagebreak;
