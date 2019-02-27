@@ -1,0 +1,26 @@
+Title         : Software deductive verification: A tutorial
+Author        : David R. Cok
+Affiliation   : CEA, Safer Software Consulting
+Email         : david.r.cok@gmail.com
+
+Colorizer     : javascript
+Bib style     : plainnat
+Bibliography  : example
+Logo          : False
+
+Doc class     : [10pt]article
+
+# Introduction 
+
+... introducction ...
+
+#Lesson 1: Postconditions 
+
+
+
+&pagebreak;
+
+
+
+# Lesson 2: Preconditions 
+&pagebreak;
