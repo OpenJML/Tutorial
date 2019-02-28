@@ -8,31 +8,58 @@ Bib style     : plainnat
 Bibliography  : example
 Logo          : False
 
-Doc class     : [12pt]article
+Package       : times
+Package       : [T1]fontenc
 
-lesson-format : **Lesson\ &label;: &caption;**
+Tex Header    :
+  \IfFileExists{luximono.sty}{\usepackage[scaled=0.81]{luximono}}{\usepackage[scaled=0.81]{beramono}}
 
-Lesson {
+
+lesson {
  label: '[@lesson]{.lesson-label}';
- before: '[&lesson-format;]{.lesson-before}';
+ before: '[**Lesson\ &label;: &caption;**]{.lesson-before}';
  display : block;
+ toc: lessons;
+ toc-line: "&label;&ensp;&caption;";
  font-size: 20pt;
  @lesson: arabic1
  @lesson;
  breakable: true;
+ page-break-before: always;
  }
- 
 
-# Introduction 
+h1 {
+  font-size: 20pt;
+}
+
+[TOC]
+
+## Lessons { -; toc:clear; }
+[TOC=lessons]
+\/
+
+
+# Introduction {-}
 
 ... introducction ...
+
 &pagebreak;
+# Tools{-}
+
+... introduction ...
+
+
+&pagebreak;
+# Lesson: Postconditions { @h1:1; label: "@h1"}
+
+
+# Lesson: Preconditions
 
 ~ Lesson {caption: Postconditions}
 ~
 
 {Postconditions}
-&pagebreak;
+
 
 
 
@@ -43,4 +70,3 @@ Lesson {
 ~
 
 ... preconditions...
-&pagebreak;
